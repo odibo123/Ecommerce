@@ -1,0 +1,46 @@
+package javaSessions;
+
+public class EmployeeDatae {
+//how to implement encapsulation in java
+	//private data variables so that the variables cant be accessed directly from outside the class
+	
+	private int ssn;
+	private String empName;
+	private int empASge;
+	
+	//getters and setters
+	//first we set and then we get the values of the field or variables
+	public static void main(String[] args) {
+		//To access class EmployeeDatae create object of the class
+		EmployeeDatae emp = new EmployeeDatae();
+		emp.setEmpName("Naveen Kin");
+		emp.setEmpASge(45);
+		emp.setSsn(123456);
+		System.out.println("Employee name is: " + emp.getEmpName());//will return employee name
+	}
+
+	public int getSsn() {
+		return ssn;
+	}
+
+	public void setSsn(int ssn) {
+		this.ssn = ssn;
+	}
+
+	public String getEmpName() {
+		return empName;
+	}
+
+	public void setEmpName(String empName) {
+		this.empName = empName;     //this.class variable = local variable  Naveen Kin will be given to class variable
+	}
+
+	public int getEmpASge() {
+		return empASge;
+	}
+
+	public void setEmpASge(int empASge) {
+		this.empASge = empASge;
+	}
+
+}

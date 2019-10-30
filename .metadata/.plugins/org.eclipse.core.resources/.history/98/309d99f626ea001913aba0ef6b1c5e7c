@@ -1,0 +1,42 @@
+Feature: GuruBank live Guru Accout Page Test
+
+  Scenario Outline: To test user should be able to sort product by their names
+    Given user is on Home Page
+    And user verify Home Page title
+    And user click on My Account link
+    Then user clicks on create an account link
+    And user enters "<firstname>" and "<middlename>" and email and "<lastname>" and "<password>" and "<confirmPassword>"
+    And user click on Register button
+   # Then "<IntendedUser>"  verifies that reistration is done
+    Then user clicks on TV Menu
+    And user click on add product to  your wishlist
+    Then user click on Share Wishlist
+   # And user log in after entering neccessary information
+    Then user enters his "<emailId>"
+    And user types in a "<message>"
+    Then user user clicks Share Wishlist
+    And user confirms his Wishlist is shared
+
+    Examples: 
+      | firstname | middlename | lastname | password   | confirmPassword | IntendedUser        | emailId                   | message  |
+      | peter     | c          | mikel    | mikel123   | mikel123        | peter c  mikel      | christophodiboo@yahoo.com | prepared |
+      | michael   | d          | Jackson  | jackson123 | jackson123      | michael  d  Jackson | christophodibo@gmail.com  | ready    |
+
+  #Scenario: To test user is able to purchase product using registered email id
+    #Given user is on Home Page
+    #And user verify Home Page title
+    #Then user click on Account
+    #And user mouses over to on My Account
+    #Then user clicks on create an account link
+    #And user click on my Wishlist link
+    #Then user click on Add To Cart link
+    #And user enter shipping informations
+    #Then user clicks on update total
+    #And user user clicks on proceed To Checkout
+    #Then user clicks on continue in billing page
+    #Then user should see billing and shipping address
+    #And user selects mode of payment
+    #Then user click continue button
+    #Then user confims the grand total
+    #Then user click on Place Order
+    #And user confirm that order is placed

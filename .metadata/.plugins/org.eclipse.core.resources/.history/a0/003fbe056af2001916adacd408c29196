@@ -1,0 +1,34 @@
+Feature: Automation Practice App Contact us Test
+
+  #Scenario Outline: To check that user can send a message to Customer Service
+    #Given user opens the browser
+    #Then user is on Home Page
+    #And user sees a Logo banner
+    #When user click on Contact us link
+    #Then user validate Contact us Page
+    #Then user selects Customer Service from Subject Heading dropdown
+    #And user enter "<email>" address
+    #And user enter quantity in   "<orderReference>"
+    #And user chooses a file
+    #And user types a "<message>" in the message box
+    #Then user click the send button
+    #Then user confirm message was sent
+#
+    #Examples: 
+      #| email                    | orderReference | message                         |
+      #| christophodibo@yahoo.com |            123 | I want to see my order          |
+      #| pet123@gmail.com         |            456 | How soon can I cancel my order? |
+
+  Scenario Outline: To test that user can add an item to the cart and remove the same
+    Given user opens the browser
+    Then user is on Home Page
+    And user sees a Logo banner
+    And user click on search input box
+    And user search for "<clothing>" in the search input box
+    When user clicks on Search on search box
+
+    Examples: 
+      | clothing |
+      | women    |
+      | dresses  |
+      | T-Shirt  |

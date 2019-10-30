@@ -1,0 +1,13 @@
+package step;
+
+import base.TestBase;
+import pages.MyWishListPage;
+
+public class SavedOrderStepDef extends TestBase {
+	
+	
+	MyWishListPage myWishListPage = new MyWishListPage();
+	
+	
+
+}

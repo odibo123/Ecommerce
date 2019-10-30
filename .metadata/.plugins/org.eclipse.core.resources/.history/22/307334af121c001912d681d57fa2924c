@@ -1,0 +1,13 @@
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class ContactUsTest {
+
+public void contactUs(){
+	
+	
+	
+	
+	System.setProperty("webdriver.chrome.driver", "C:\\Drivers\\chromedriver.exe");
+	driver = new ChromeDriver();
+}
+}

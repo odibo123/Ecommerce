@@ -1,0 +1,43 @@
+package pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+
+public class macPage {
+	
+	@FindBy(how = How.LINK_TEXT, using"Compare")
+	  public static WebElement Compare;
+	
+	@FindBy(how = How.CSS, using".section-imac .product-eyebrow")
+	  public static WebElement iMac;
+	
+
+	@FindBy(how = How.LINK_TEXT, using"MacBook Pro")
+	  public static WebElement MacBookPro;
+	
+	@FindBy(how = How.LINK_TEXT, using"Accessories")
+	  public static WebElement Accessories;
+	
+	@FindBy(how = How.LINK_TEXT, using"MacBook Air")
+	  public static WebElement MacBookAir;
+
+	public void click_Compare(){
+		Compare.click();	
+	}
+	
+	public void verify_iMac(){
+		iMac.getText();
+	}
+	
+	public void click_MacBookPro(){
+		MacBookPro.click();	
+	}
+	public void click_Accessories(){
+		Accessories.click();
+	}
+	
+	public void click_MacBookAir(){
+		MacBookAir.click();
+	}	
+}

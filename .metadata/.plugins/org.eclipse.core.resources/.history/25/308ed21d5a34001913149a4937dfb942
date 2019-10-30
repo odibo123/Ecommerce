@@ -1,0 +1,7 @@
+package Commerce.com.Commerce.com
+
+/**
+ * Created by User on 08/02/2019.
+ */
+class RunnerTestTest extends groovy.util.GroovyTestCase {
+}

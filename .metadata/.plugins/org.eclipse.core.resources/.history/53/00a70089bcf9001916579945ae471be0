@@ -1,0 +1,45 @@
+package pages;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+
+import base.TestBase;
+
+public class OrderPage extends TestBase {
+	
+	
+	@FindBy(how=How.CSS,using= ".btn-checkout > span > span")
+	WebElement PlaceOrderBtn;
+	
+	//@FindBy(how=How.XPATH,using= "(.//*[normalize-space(text()) and normalize-space(.)='Log Out'])[1]/following::h1[1]")
+	@FindBy(how=How.CSS,using= "h1")
+	WebElement OrderConfirmationMessage;
+	
+	@FindBy(how=How.XPATH,using= "(.//*[normalize-space(text()) and normalize-space(.)='Your order has been received.'])[1]/following::h2[1]")
+	WebElement OrderAppreciationMessage;
+	
+
+	@FindBy(how=How.CSS,using= "div.col-main > p > a")
+	WebElement  OrderNumber;
+	
+	public void click_PlaceOrderBtn(){
+		//PlaceOrderBtn.click();
+		
+		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		executor.executeScript("arguments[0].click();",PlaceOrderBtn);
+		
+	}
+
+	public String confirm_OrderConfirmationMessage(){
+	return	OrderConfirmationMessage.getText();
+	}
+	public String confirm_OrderAppreciationMessage(){
+		return	OrderAppreciationMessage.getText();
+		}
+	public String confirm_OrderNumber(){
+		return	OrderNumber.getText();
+		}
+	
+}

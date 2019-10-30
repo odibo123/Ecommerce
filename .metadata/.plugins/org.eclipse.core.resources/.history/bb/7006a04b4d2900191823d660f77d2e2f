@@ -1,0 +1,25 @@
+@Register
+Feature: Register
+
+  Scenario Outline: As a new user I want to open an account
+    Given I am on Home Page
+    When I click on Sign in button
+    And I enter  email"<email>" address
+    And I click on create account button
+    And I click  male radio button
+    And I type  firstname "<firstname>"
+    And I enter lastname "<lastname>"
+    And I enter a "<password>"
+    And I select my date of Birth
+    When I enter name of "<Company>"
+    And I type a "<value>" as my company address
+    And I enters company second "<addressLine>"
+    Then I type company "<City>"
+    And I select Company State
+    And I type my state zip code with "<number>"
+    Then I type my message into "<Additional Information>" box
+
+    Examples: 
+      | email                | firstname | lastname | password | Company | value | addressLine    | City        | number | AdditionalInformation |  |
+      | mikel3@gmail.com     | mikel     | great    | Today2   | Abc ltd |     5 | Green Suite    | Los Angeles |  90001 | None                   |  |
+      | peter2@yahoomail.com | john      | terry    | Today4   | XYZ Ltd |    67 | Queen Building | Miami       |  33101 | Expecting your calls   |  |

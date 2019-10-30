@@ -1,0 +1,50 @@
+package pages;
+
+import java.util.List;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.ui.Select;
+
+import base.TestBase;
+
+public class ShippingDetailsPage extends TestBase{
+	
+	
+	
+	@FindBy(how=How.NAME,using="country_id")
+	WebElement CountryDropdownlist;
+	
+	@FindBy(how=How.XPATH,using="//input[@id='region']")
+	List<WebElement> StateOrProvinceDropdownlist;
+	
+	public void select_Country_From_Dropdown(){
+		Select select = new Select(CountryDropdownlist);
+		select.selectByIndex(4);
+	}
+	
+	@FindBy(how=How.NAME,using="estimate_postcode")
+	WebElement ZipCodeBtn;
+	@FindBy(how=How.XPATH,using="//span[contains(text(),'Estimate')]")
+	WebElement EstimateLink;
+	
+	public void select_Province_From_StateOrProvinceDropdownlist() throws InterruptedException{
+		
+		List<WebElement> options = StateOrProvinceDropdownlist;
+		for(WebElement option : options) {
+		    if (option.getText().equals("Algiers")) {
+		        option.click();
+		        break;
+		    }
+     		
+	}
+
+	}
+	      public void type_ZipCode(){
+	    	  ZipCodeBtn.sendKeys("SE25 4UD"); 
+	      }
+	      public void click_Estimate(){
+	    	  EstimateLink.click();  
+	      }
+}

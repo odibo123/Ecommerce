@@ -1,0 +1,107 @@
+package step_Definitn;
+
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.PageFactory;
+
+import cucumber.api.DataTable;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import pages.MacPage;
+import pages.TechSpecPage;
+import pages.macBookProPage;
+
+public class OrderStep_Definitn {
+	public WebDriver driver;
+	                          
+	
+	
+	@Given("^the url 'https://www\\.apple\\.com/uk/'$")
+	public void the_url_https_www_apple_com_uk() throws Throwable {
+		System.setProperty("webdriver.chrome.driver", "C:\\Drivers\\chromedriver.exe");
+		driver = new ChromeDriver();
+		 driver.navigate().to("https://www.apple.com/uk/");
+		driver.manage().window().maximize();
+		Thread.sleep(3000);
+	}
+	
+	@Given("^I click on Mac link$")
+	public void i_click_on_Mac_link() throws Throwable {
+		MacPage page = PageFactory.initElements(driver, MacPage.class);
+		page.click_iMac();
+	}
+
+	@Given("^I also click on MacBook Pro Icon$")
+	public void i_also_click_on_MacBook_Pro_Icon() throws Throwable {
+		MacPage page = PageFactory.initElements(driver, MacPage.class);
+		page.click_MacBookPro();
+	    
+	}	
+	
+	
+	@Given("^I click on the Tech Specs link$")
+	public void i_click_on_the_Tech_Specs_link() throws Throwable {
+		macBookProPage page = PageFactory.initElements(driver, macBookProPage.class);
+		       page.click_TechSpecs();
+	}
+	@When("^I choose a MacBook Pro with the following features and accessories$")
+	public void i_choose_a_MacBook_Pro_with_the_following_features_and_accessories(DataTable dt) throws Throwable {
+	List<Map<String, String>> list = dt.asMaps(String.class, String.class);
+	for(int i =0; i<list.size(); i++){
+		
+		System.out.println(list.get(1).get("Options"));
+		System.out.println(list.get(1).get("Specifications"));
+		driver.findElement(By.id("15-inch-label")).click();  //15-inch-label
+		driver.findElement(By.cssSelector(".ac-ln-button")).click();
+		driver.findElement(By.cssSelector(".as-filter-button:nth-child(2)")).click();
+		driver.findElement(By.cssSelector("#label")).click();
+		//driver.findElement(By.xpath("//*[@id='model-selection']")).click();
+  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		//JavascriptExecutor javascript = (JavascriptExecutor) driver;
+		  //javascript.executeScript("window.scrollBy(0,250)", "");
+  
+/*  WebElement radio1 = driver.findElement(By.className(""));
+  WebElement radio2 = driver.findElement(By.className(".as-swatch"));
+  
+		 driver.findElement(By.className(".as-swatch-label")).click();
+		//  driver.findElement(By.xpath("//input[@id='colorOptionGridGroup_MV932B/A']")).click();
+		  driver.findElement(By.cssSelector(".Silver")).click();*/
+	}
+
+			
+	
+	}
+	@Then("^I can place an order for it\\.$")
+	public void i_can_place_an_order_for_it() throws Throwable {
+	  
+	}
+
+	@Given("^when I choose the following items:$")
+	public void when_I_choose_the_following_items(DataTable arg1) throws Throwable {
+		
+	    // Write code here that turns the phrase above into concrete actions
+	    // For automatic transformation, change DataTable to one of
+	    // List<YourType>, List<List<E>>, List<Map<K,V>> or Map<K,V>.
+	    // E,K,V must be a scalar (String, Integer, Date, enum etc)
+	    
+	}
+
+	@When("^I proceed to checkout$")
+	public void i_proceed_to_checkout() throws Throwable {
+	  
+	}
+
+	@Then("^a total price of £(\\d+)\\.(\\d+) will be displayed$")
+	public void a_total_price_of_£_will_be_displayed(int arg1, int arg2) throws Throwable {
+
+	}
+
+}

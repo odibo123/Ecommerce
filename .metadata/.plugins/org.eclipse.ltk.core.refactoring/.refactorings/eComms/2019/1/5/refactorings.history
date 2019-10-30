@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;eComms/src/test/resources/feature/AddToBag.feature&apos; to &apos;AddToCart.feature&apos;" description="Rename resource &apos;AddToBag.feature&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/test/resources/feature/AddToBag.feature" name="AddToCart.feature" stamp="1548712778879" updateReferences="true"/>
+</session>

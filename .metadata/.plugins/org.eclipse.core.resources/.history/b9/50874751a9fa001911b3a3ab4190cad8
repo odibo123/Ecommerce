@@ -1,0 +1,25 @@
+package step;
+
+import org.openqa.selenium.support.PageFactory;
+
+import base.TestBase;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.When;
+import pages.AdminPanelPage;
+
+public class ExportOrderStepDef extends TestBase{
+	
+	 AdminPanelPage  adminPanelPage = new  AdminPanelPage();
+
+	 
+	 @Given("^user is on live\\.demoguru(\\d+)\\.com/index\\.php/backendlogin Home Page$")
+	 public void user_is_on_live_demoguru_com_index_php_backendlogin_Home_Page(int arg1) throws Throwable {
+	     TestBase.prop.getProperty("url");
+	 }
+@When("^user login with the credentials provided$")
+public void user_login_with_the_credentials_provided() throws Throwable {
+	 AdminPanelPage  adminPanelPage= PageFactory.initElements(driver, AdminPanelPage.class);
+	 adminPanelPage.type_into_UsernameBtn();
+	 adminPanelPage.type_into_PasswordBtn();
+}
+}

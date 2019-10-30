@@ -1,0 +1,27 @@
+package pages;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+
+import base.TestBase;
+
+public class OrderPage extends TestBase {
+	
+	
+	@FindBy(how=How.CSS,using= ".btn-checkout > span > span")
+	WebElement PlaceOrderBtn;
+	
+	
+	
+	
+	public void click_PlaceOrderBtn(){
+		//PlaceOrderBtn.click();
+		
+		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		executor.executeScript("arguments[0].click();",PlaceOrderBtn);
+		
+	}
+
+}

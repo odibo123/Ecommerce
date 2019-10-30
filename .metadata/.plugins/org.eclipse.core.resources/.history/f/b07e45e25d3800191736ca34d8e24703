@@ -1,0 +1,8 @@
+package pages;
+
+public class HomePaGe {
+	
+	
+	@FindBy(how=How.LINKTEXT,using "")
+
+}

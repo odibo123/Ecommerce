@@ -1,0 +1,55 @@
+package macPro;
+
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import cucumber.api.DataTable;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.When;
+
+public class MacStepD {
+	public WebDriver driver;
+@Given("^User is already on Login Page$")
+public void user_is_already_on_Login_Page() throws Throwable {
+	System.setProperty("webdriver.chrome.driver", "C:\\Drivers\\chromedriver.exe");//initialise the WebDriver
+	driver = new ChromeDriver();
+    driver.navigate().to("https://www.apple.com/uk/");
+	driver.manage().window().maximize();
+	 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);List <WebElement> frame = driver.findElements(By.tagName("iframe"));
+	 int total_frames = frame.size();
+	 System.out.println("total number of frames "+ total_frames);
+	 
+}
+
+@Given("^I click on Mac link$")
+public void i_click_on_Mac_link() throws Throwable {
+    driver.findElement(By.linkText("Mac")).click();
+}
+
+@Given("^I also click on MacBook Pro Icon$")
+public void i_also_click_on_MacBook_Pro_Icon() throws Throwable {
+ driver.findElement(By.xpath("//*[@id='chapternav']/div/ul/li[2]/a/span[1]")).click();
+}
+
+@Given("^I click on the Tech Specs link$")
+public void i_click_on_the_Tech_Specs_link() throws Throwable {
+	//*[@id='ac-localnav']/div/div[2]/div[2]/div[1]/ul/li[3]/a  
+	 driver.findElement(By.xpath("//*[@id='ac-localnav']/div/div[2]/div[2]/div[1]/ul/li[3]/a ")).click();
+}
+
+@When("^I choose a MacBook Pro with the following features and accessories$")
+public void i_choose_a_MacBook_Pro_with_the_following_features_and_accessories(DataTable credentials) throws Throwable {
+	for (Map<String, String> myData : credentials.asMaps(String.class, String.class)){
+	driver.findElement(By.xpath("//input[@id='15-inch-label']")).sendKeys(myData.get("Screen"));
+		
+		
+	 
+	}
+}
+}

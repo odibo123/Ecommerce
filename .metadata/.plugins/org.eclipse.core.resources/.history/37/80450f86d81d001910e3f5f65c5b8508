@@ -1,0 +1,59 @@
+import java.util.concurrent.TimeUnit;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class CreateMyAccountTest {
+	
+	public WebDriver driver;
+	
+	@Before
+	public void setUp(){
+		
+		System.setProperty("webdriver.chrome.driver", "C:\\Drive\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.navigate().to("http://automationpractice.com/index.php?");
+		
+		driver.manage().window().maximize();
+	//	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	}
+	
+	@Test
+	public void createAccountTest() throws InterruptedException{
+		
+		driver.findElement(By.linkText("Sign in")).click();
+		driver.findElement(By.id("email_create")).sendKeys("christopherodibo@yahoo.com");
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		
+		jse.executeScript("window.scrollBy(0,750)", "");
+
+		driver.findElement(By.xpath("//button[@id='SubmitCreate']//span")).click();
+		Thread.sleep(4000);
+		driver.findElement(By.id("customer_firstname")).sendKeys("Peter");
+		
+		driver.findElement(By.id("customer_lastname")).sendKeys("James");
+        driver.findElement(By.name("passwd")).sendKeys("test123"); 
+		Thread.sleep(2000);
+		Select days = new Select(driver.findElement(By.id("days")));
+		days.selectByIndex(4);
+		
+		Select months = new Select(driver.findElement(By.name("months")));
+		months.selectByValue("3");
+		//select year by value
+		Select years = new Select(driver.findElement(By.id("years")));
+		years.selectByValue("2016");
+		driver.findElement(By.xpath("//*[@id='firstname']")).sendKeys("Peter");
+		
+	}
+  //      @After
+//	public void tearDown(){
+//	driver.close();
+//	}
+
+}

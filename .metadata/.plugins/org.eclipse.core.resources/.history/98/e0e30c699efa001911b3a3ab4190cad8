@@ -1,0 +1,19 @@
+package step;
+
+import org.openqa.selenium.support.PageFactory;
+
+import base.TestBase;
+import cucumber.api.java.en.When;
+import pages.MobilePage;
+
+public class DiscountCouponStepDef extends TestBase{
+	
+	MobilePage  mobilePage = new MobilePage ();
+	@When("^I click  IPhone on Add To Cart$")
+	public void i_click_IPhone_on_Add_To_Cart() throws Throwable {
+		MobilePage  mobilePage= PageFactory.initElements(driver, MobilePage.class);	
+		mobilePage._Should_click_On_Add_To_Cart_Iphone();
+	    
+
+}
+}

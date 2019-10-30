@@ -1,0 +1,140 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 100542700,
+              "error_message": "java.lang.IllegalStateException: The driver executable does not exist: C:\\Selenium\\chromedriver.exe\r\n\tat com.google.common.base.Preconditions.checkState(Preconditions.java:199)\r\n\tat org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:121)\r\n\tat org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:116)\r\n\tat org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)\r\n\tat org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)\r\n\tat org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:296)\r\n\tat org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)\r\n\tat org.openqa.selenium.chrome.ChromeDriver.\u003cinit\u003e(ChromeDriver.java:120)\r\n\tat base.TestBase.initialize(TestBase.java:45)\r\n\tat stepDefinition.Common.setUp(Common.java:15)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)\r\n\tat java.lang.reflect.Method.invoke(Unknown Source)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:40)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:34)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)\r\n\tat cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)\r\n\tat cucumber.runtime.Runtime.runHooks(Runtime.java:212)\r\n\tat cucumber.runtime.Runtime.runBeforeHooks(Runtime.java:202)\r\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:40)\r\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\r\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)\r\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\r\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:100)\r\n\tat org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)\r\n\tat org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)\r\n\tat org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)\r\n",
+              "status": "failed"
+            },
+            "match": {
+              "location": "Common.setUp()"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "A MacBook with accessories can be ordered on the website",
+        "description": "",
+        "id": "buying-a-macbook-pro-on-the-website;a-macbook-with-accessories-can-be-ordered-on-the-website",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "I go to the url",
+            "match": {
+              "location": "StepDefs.i_go_to_the_url()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "I click on Mac link",
+            "match": {
+              "location": "StepDefs.i_click_on_Mac_link()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "I also click on MacBook Pro Icon",
+            "match": {
+              "location": "StepDefs.i_also_click_on_MacBook_Pro_Icon()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "I choose a MacBook Pro with the following features and accessories",
+            "match": {
+              "location": "StepDefs.i_choose_a_MacBook_Pro_with_the_following_features_and_accessories(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Options",
+                  "Specifications"
+                ],
+                "line": 11
+              },
+              {
+                "cells": [
+                  "Screen",
+                  "15\u0027\u0027"
+                ],
+                "line": 12
+              },
+              {
+                "cells": [
+                  "Processor",
+                  "2.9GHz"
+                ],
+                "line": 13
+              },
+              {
+                "cells": [
+                  "Memory RAM",
+                  "16GB"
+                ],
+                "line": 14
+              },
+              {
+                "cells": [
+                  "Colour",
+                  "Silver"
+                ],
+                "line": 15
+              },
+              {
+                "cells": [
+                  "Software",
+                  "Logic Pro X"
+                ],
+                "line": 16
+              },
+              {
+                "cells": [
+                  "Display adapter",
+                  "USB-C to USB Adapter"
+                ],
+                "line": 17
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 18,
+            "name": "I can place an order for it",
+            "match": {
+              "location": "StepDefs.i_can_place_an_order_for_it()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Buying a MacBook Pro on the website",
+    "description": "\r\nAs an online customer\r\nI want to choose a MacBook Pro with accessories on the website So that I can buy it online",
+    "id": "buying-a-macbook-pro-on-the-website",
+    "keyword": "Feature",
+    "uri": "Order.feature"
+  }
+]

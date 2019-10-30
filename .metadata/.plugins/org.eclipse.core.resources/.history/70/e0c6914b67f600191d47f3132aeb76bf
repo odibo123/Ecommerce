@@ -1,0 +1,31 @@
+package steps;
+
+import base.TestBase;
+
+public class ProductSortingStepDef extends TestBase {
+	
+	@When("^I click on  MOBILE link$")
+	public void i_click_on_MOBILE_link() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@Then("^user verify seeing  mobile title$")
+	public void user_verify_seeing_mobile_title() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@Then("^user select name in SORTBY dropdown menu$")
+	public void user_select_name_in_SORTBY_dropdown_menu() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@Then("^user verify all three products are sorted by name$")
+	public void user_verify_all_three_products_are_sorted_by_name() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+}

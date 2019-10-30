@@ -1,0 +1,19 @@
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class ContactUsTest {
+
+	public WebDriver driver;
+	@Test
+	public void contactUsUser(){
+	System.setProperty("webdriver.chrome.driver" ,"C:\\Drive\\chromedriver.exe");	
+	driver = new ChromeDriver();	
+	driver.navigate().to("http://automationpractice.com/index.php?");
+	driver.findElement(By.linkText("Contact us")).click();
+	Select subject_heading = new Select(driver.findElement(By.id("id_contact")));
+	subject_heading.selectByVisibleText("Customer service"); 
+	}
+}

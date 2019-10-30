@@ -1,0 +1,42 @@
+import java.util.concurrent.TimeUnit;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class CreateMyAccountTest {
+	
+	public WebDriver driver;
+	
+	@Before
+	public void setUp(){
+		
+		System.setProperty("webdriver.chrome.driver", "C:\\Drive\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.navigate().to("http://automationpractice.com/index.php?");
+		
+		driver.manage().window().maximize();
+	//	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	}
+	
+	@Test
+	public void createAccountTest() throws InterruptedException{
+		
+		driver.findElement(By.linkText("Sign in")).click();
+		driver.findElement(By.id("email_create")).sendKeys("christopherodibo@yahoo.com");
+	/*	JavascriptExecutor jse =(JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy0,250)","");
+
+		driver.findElement(By.cssSelector("span")).click();
+		Thread.sleep(4000);*/
+	}
+ //       @After
+//	public void tearDown(){
+//	driver.close();
+	//}
+
+}

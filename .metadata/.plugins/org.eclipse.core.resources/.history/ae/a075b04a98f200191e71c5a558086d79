@@ -1,0 +1,31 @@
+package stepDefinitionTest;
+
+import org.openqa.selenium.support.PageFactory;
+
+import base.TestBase;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import pages.HomePage;
+
+public class ProductListingPageTest extends TestBase{
+	HomePage homePage = new HomePage(); 
+	
+	
+	@Then("^user click on search input box$")
+	public void user_click_on_search_input_box() throws Throwable {
+		HomePage homepage=PageFactory.initElements(driver,HomePage.class);
+		 homepage.click_on_Search_Text_Box();
+	}
+
+	@Then("^user search for \"([^\"]*)\" in the search input box$")
+	public void user_search_for_in_the_search_input_box(String clothing) throws Throwable {
+		HomePage homepage=PageFactory.initElements(driver,HomePage.class); 
+	       homepage.type_Choice_of_clothes(clothing);
+	}
+	@When("^user clicks on Search on search box$")
+	public void user_clicks_on_Search_on_search_box() throws Throwable {
+		HomePage homepage=PageFactory.initElements(driver,HomePage.class); 
+		homepage.I_click_Search_Icon_Box();
+	}
+	
+}

@@ -1,0 +1,10 @@
+Feature: SavedOrder Test
+
+  Scenario: To verify that user is able to save previously order in a pdf file
+    Given I am on Guru Homepage
+    And I click on my account link button
+    And I Login into application using previously created credential
+    And I click on My Orders
+    And I click on view Order
+    And I verify that the previously created Order is displayed in ORDER TABLE and staus was  PENDING
+    And I click on print Order link

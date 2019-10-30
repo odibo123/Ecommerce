@@ -1,0 +1,55 @@
+package pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+
+public class CheckOutPage {
+
+	@FindBy(how=How.ID, using="billing_first_name")
+	  public static WebElement firstnameBtn;
+	
+	@FindBy(how=How.ID, using="billing_last_name")
+	  public static WebElement lastnameBtn;
+	
+	@FindBy(how=How.ID, using="billing_address_1")
+	  public static WebElement addressBtn;
+	
+	@FindBy(how=How.ID, using="billing_city")
+	  public static WebElement city;
+
+	
+	
+	@FindBy(how=How.ID, using="billing_postcode")
+	  public static WebElement postcode;
+
+	@FindBy(how=How.ID, using="billing_phone")
+	  public static WebElement phone;
+
+	//Actions
+	
+	public void type_firstname(String firstname){
+		firstnameBtn.sendKeys(firstname);
+	}
+	public void type_lastname(String lastname){
+		lastnameBtn.sendKeys(lastname);
+		}
+	public void type_address(String address){
+		addressBtn.sendKeys(address );
+	}
+	
+	
+	public void type_city(String){
+		city.sendKeys("London");
+	}
+	
+	
+			
+	public void type_postcode(String){
+		postcode.sendKeys("Se25 4ud");
+	}
+	
+	public void type_phone(String){
+		phone.sendKeys("07491325309");
+	}	
+}

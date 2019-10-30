@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item value="All Catalogs" key="catalog"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\eclipse\Illumination\GuruBank\src\main\java\config\config.properties"/>
+			<item value="C:\eclipse\Illumination\DlGProjectPageFactory\src\test\java\myPage\LandingPage.java"/>
+			<item value="C:\Users\User\git\MyTestProject\MacBookPro.com\src\test\java\pages\MacPage.java"/>
+			<item value="C:\eclipse\Illumination\ShopDemo\src\main\java\shop\TestBase.java"/>
+			<item value="C:\eclipse\Illumination\Automation.Ecomm"/>
+			<item value="C:\eclipse\Illumination\Automation.Ecomm\src\test\resource"/>
+			<item value="C:\Users\User\git\MyTestProject\MacBookPro.com"/>
+			<item value="C:\eclipse\Illumination\Mac.com\src\main\java\config\config.properties"/>
+			<item value="C:\eclipse\Illumination\Free\src\test\java\stepDefinition\DealWitMapStepDefinition.java"/>
+			<item value="C:\eclipse\Illumination\Commerce.com"/>
+			<item value="C:\eclipse\Illumination\Ecommercer.com\src\ContactUsTest.java"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="AutomationEcommerce.com.AutomationEcommerce.com"/>
+			<item value="AutomationPractice.com.AutomationPractice.com"/>
+			<item value="LiveGuruEcomerceTest.LiveGuruEcomerceTest"/>
+			<item value="LiveEcommeceTest.LiveEcommeceTest"/>
+			<item value="GuruBank.GuruBank"/>
+			<item value="DlGBackground.DlGBackground"/>
+			<item value="DlGProjectPageFactory.DlGProjectPageFactory"/>
+			<item value="DlGProject.DlGProject"/>
+			<item value="AutomationPageObj.AutomationPageObj"/>
+			<item value="AutomationPractice.com.qa"/>
+			<item value="AutomationPractice.com.qa.AutomationPractice.com.qa"/>
+			<item value="shopTools.qa.com.shopTools.qa.com"/>
+			<item value="Tools.qa.com.Tools.qa.com"/>
+			<item value="Tools.com.Tools.com"/>
+			<item value="ToolsQA.com.ToolsQA.com"/>
+		</list>
+		<list key="groupId">
+			<item value="AutomationEcommerce.com"/>
+			<item value="AutomationPractice.com"/>
+			<item value="LiveGuruEcomerceTest"/>
+			<item value="LiveEcommeceTest"/>
+			<item value="GuruBank"/>
+			<item value="DlGBackground"/>
+			<item value="DlGProjectPageFactory"/>
+			<item value="DlGProject"/>
+			<item value="AutomationPageObj"/>
+			<item value="AutomationPractice.com.qa"/>
+			<item value="shopTools.qa.com"/>
+			<item value="Tools.qa.com"/>
+			<item value="Tools.com"/>
+			<item value="ToolsQA.com"/>
+			<item value="Aldi.com"/>
+		</list>
+		<list key="artifactId">
+			<item value="AutomationEcommerce.com"/>
+			<item value="AutomationPractice.com"/>
+			<item value="LiveGuruEcomerceTest"/>
+			<item value="LiveEcommeceTest"/>
+			<item value="GuruBank"/>
+			<item value="DlGBackground"/>
+			<item value="DlGProjectPageFactory"/>
+			<item value="DlGProject"/>
+			<item value="AutomationPageObj"/>
+			<item value="AutomationPractice.com.qa"/>
+			<item value="shopTools.qa.com"/>
+			<item value="Tools.qa.com"/>
+			<item value="Tools.com"/>
+			<item value="ToolsQA.com"/>
+			<item value="Aldi.com"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+</section>

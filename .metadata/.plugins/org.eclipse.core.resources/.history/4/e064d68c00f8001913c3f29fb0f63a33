@@ -1,0 +1,27 @@
+package stepDefinitionTest;
+
+import org.openqa.selenium.support.PageFactory;
+
+import base.TestBase;
+import cucumber.api.java.en.Given;
+import pages.HomePage;
+
+public class ChangePriceStepDef extends TestBase {
+	 HomePage  homePage= new  HomePage();
+
+
+
+@Given("^user mouses hover women  and clicks on summer dress$")
+public void user_mouses_hover_women_and_clicks_on_summer_dress() throws Throwable {
+	Thread.sleep(5000);
+	HomePage  homePage = PageFactory.initElements(driver, HomePage .class);
+	 homePage.click_SummerDressLabel();
+	
+}
+
+@Given("^user changes the price range to \\$(\\d+)-\\$(\\d+)$")
+public void user_changes_the_price_range_to_$_$(int arg1, int arg2) throws Throwable {
+	HomePage  homePage = PageFactory.initElements(driver, HomePage .class);
+	homePage.change_price_range();
+}
+}

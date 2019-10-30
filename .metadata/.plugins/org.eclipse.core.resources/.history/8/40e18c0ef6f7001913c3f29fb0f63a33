@@ -1,0 +1,8 @@
+package stepDefinitionTest;
+
+import base.TestBase;
+import pages.HomePage;
+
+public class ChangePriceStepDef extends TestBase {
+	 HomePage  homePage= new  HomePage();
+}

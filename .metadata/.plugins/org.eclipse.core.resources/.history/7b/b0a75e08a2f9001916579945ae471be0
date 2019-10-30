@@ -1,0 +1,44 @@
+package pages;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+
+import base.TestBase;
+
+public class OrderPage extends TestBase {
+	
+	
+	@FindBy(how=How.CSS,using= ".btn-checkout > span > span")
+	WebElement PlaceOrderBtn;
+	
+	@FindBy(how=How.XPATH,using= "//*[@id='top'/body/div/div/div[2]/div/div/div[1]/h1")
+	WebElement OrderConfirmationMessage;
+	
+	@FindBy(how=How.XPATH,using= "//*[@id='top']/body/div/div/div[2]/div/div/h2")
+	WebElement OrderAppreciationMessage;
+	
+
+	@FindBy(how=How.XPATH,using= "//*[@id='top']/body/div/div/div[2]/div/div/p[1]")
+	WebElement  OrderNumber;
+	
+	public void click_PlaceOrderBtn(){
+		//PlaceOrderBtn.click();
+		
+		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		executor.executeScript("arguments[0].click();",PlaceOrderBtn);
+		
+	}
+
+	public String confirm_OrderConfirmationMessage(){
+	return	OrderConfirmationMessage.getText();
+	}
+	public String confirm_OrderAppreciationMessage(){
+		return	OrderAppreciationMessage.getText();
+		}
+	public String confirm_OrderNumber(){
+		return	OrderNumber.getText();
+		}
+	
+}

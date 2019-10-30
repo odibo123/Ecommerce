@@ -1,0 +1,19 @@
+package pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+
+import base.TestBase;
+
+public class PaymentInfoPage extends TestBase{
+	
+	@FindBy(how=How.CSS, using ="#p_method_checkmo")
+	WebElement MoneyOrderRadBtn;
+	
+	
+		public void click_MoneyOrderRadBtn(){
+		MoneyOrderRadBtn.click();
+}
+
+}

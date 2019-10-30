@@ -1,0 +1,59 @@
+package Automation.Ecomm.Automation.Ecomm;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class Step_Definitns {
+	
+	
+	
+	public WebDriver driver;
+	@Given("^I go to Home Page$")
+	public void i_go_to_Home_Page() throws Throwable {
+	   
+		
+		System.setProperty("webdriver.chrome.driver", "C:\\Drivers\\chromedriver.exe");
+		   driver = new ChromeDriver();
+		   driver.navigate().to("http://automationpractice.com/index.php?");
+		   driver.manage().window().maximize();
+		   driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	}
+
+	@And("^I click on Sign in link$")
+	public void i_click_on_Sign_in_link() throws Throwable {
+	    
+	}
+
+	@And("^I enter my email\"([^\"]*)\" address$")
+	public void i_enter_my_email_address(String arg1) throws Throwable {
+	    
+	}
+
+	@And("^I enter my password \"([^\"]*)\"$")
+	public void i_enter_my_password(String arg1) throws Throwable {
+	   
+	}
+
+	@When("^I click on Login button$")
+	public void i_click_on_Login_button() throws Throwable {
+	   
+	}
+
+	@Then("^I verify that I am logged in successfully$")
+	public void i_verify_that_I_am_logged_in_successfully() throws Throwable {
+	   
+	}
+
+	@And("^I sign out$")
+	public void i_sign_out() throws Throwable {
+	   
+	}
+
+}

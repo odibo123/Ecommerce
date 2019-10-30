@@ -1,0 +1,9 @@
+package stepDefinitionTest;
+
+import base.TestBase;
+
+public class ChangPriceStepDefTest extends TestBase{
+	
+	
+
+}
